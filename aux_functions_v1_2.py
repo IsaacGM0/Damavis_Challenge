@@ -6,7 +6,7 @@ def Valid_Labyrinth_Range(labyrinth): #Valid that the matrix has the dimensions 
         return False
     len_labyrinth=len(labyrinth[0]) #Check if the matrix is ​​rectangular.
     for i in labyrinth:
-        if(3 > len(i) and len(i)>1000 and len_labyrinth == len(i)):
+        if(3 > len(i) or len(i)>1000 or len_labyrinth != len(i)):
             return False
     return True
 
