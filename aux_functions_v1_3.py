@@ -1,3 +1,13 @@
+#### Class we need ####
+
+class Node:
+    def __init__(self, x, y,orientation):
+        self.x = x
+        self.y = y
+        self.orientation = orientation
+        self.parent = None
+
+
 #### Here are all auxiliar functions ####
 
 def Valid_Labyrinth_Range(labyrinth): #Valid that the matrix has the dimensions (X,Y) where 3<=X,Y<=1000.

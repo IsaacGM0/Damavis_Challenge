@@ -1,6 +1,6 @@
 #### All test functions ####
 
-from aux_functions_v1_2 import *
+from aux_functions_v1_3 import *
 from examples_test import *
 #### Examples we are going to use to Valid_Labyrinth ####
 
@@ -141,7 +141,11 @@ def test_Valid_Down():
                 raise( AssertionError("Error trying to move the rod to the down when it mustn't move ({},{}). ".format(x,y)))
 
 
-### It is not necessary a test for Valid_Rotation, it just depends on the other Valid_Moves
+### It is not necessary a test for Valid_Rotation, it just depends on the other Valid_Moves and the same for Neighbors.
+
+a= Find_Neighbors(1,2,"vertical",labyrinth)
+for i in a:
+    print(i.x,i.y,i.orientation)
 
 test_Valid_Labyrinth_Range()
 test_Valid_Labyrinth_Symbols()
