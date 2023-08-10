@@ -56,3 +56,22 @@ def Valid_Rotation(x,y,orientation,labyrinth):
         if(Valid_Up(x,y,"horizontal",labyrinth) and Valid_Down(x,y,"horizontal",labyrinth)): #If being horizontal, we can move vertically, we can rotate.
             return True
     return False
+
+
+def Find_Neighbors(x,y,orientation,labyrinth): #Check all the paths we can follow with the rod.
+    neighbors=[]
+    if(Valid_Right(x,y,orientation,labyrinth)):
+        neighbors.append(Node(x,y+1,orientation))
+    if(Valid_Left(x,y,orientation,labyrinth)):
+        neighbors.append(Node(x,y-1,orientation))
+    if(Valid_Up(x,y,orientation,labyrinth)):
+        neighbors.append(Node(x-1,y,orientation))
+    if(Valid_Down(x,y,orientation,labyrinth)):
+        neighbors.append(Node(x+1,y,orientation))
+    if(Valid_Rotation(x,y,orientation,labyrinth)):
+        if(orientation == "vertical"):
+            neighbors.append(Node(x,y,"horizontal"))
+        else:
+            neighbors.append(Node(x,y,"vertical"))
+
+    return neighbors
