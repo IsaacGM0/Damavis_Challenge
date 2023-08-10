@@ -20,13 +20,13 @@ The rod is initially positioned horizontally, and its left cell lies in [0, 0].
 
 Here an example:
 
-![Image_Rod](https://github.com/IsaacGM0/Damavis_Challenge/assets/106811614/5a9336a2-1041-4d2b-a9c0-4cd5407dcb38)
+![Image_Rod](https://github.com/IsaacGM0/Damavis_Challenge/assets/106811614/421fac53-4376-4cdf-91df-8ae5aff81652)
 
 ## Resolution
 
 First of all, we have to define the reference system:
 
-![Perspectiva](https://github.com/IsaacGM0/Damavis_Challenge/assets/106811614/f8025d62-781c-428b-8364-f731455c6a98)
+![Perspectiva](https://github.com/IsaacGM0/Damavis_Challenge/assets/106811614/9e44fc53-bab8-484c-89c9-7b09531732bb)
 
 
 Now that we have the reference system, a matrix (which is the labyrinth) of dimensions (m,n), and by the given indications we
@@ -55,7 +55,7 @@ You can solve this problem downloading the next files:
 
 You must introduce as input a rectangular matrix with "." and "#". Like this:
   
-![Labyrinth](https://github.com/IsaacGM0/Damavis_Challenge/assets/106811614/edaf11dc-6479-4c9d-ad31-d96caf2fe154)
+![Labyrinth](https://github.com/IsaacGM0/Damavis_Challenge/assets/106811614/dfe2c511-bbb4-470f-bd3c-9c37c1241e8c)
 
 The matrix dimensions must be between 3 and 1000.
 
