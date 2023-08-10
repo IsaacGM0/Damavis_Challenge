@@ -10,7 +10,17 @@ class Node:
 
 #### Here are all auxiliar functions ####
 
-def Valid_Labyrinth_Range(labyrinth): #Valid that the matrix has the dimensions (X,Y) where 3<=X,Y<=1000.
+
+def Valid_Start_Node(labyrinth): #It validates if we can start with the rod vertically or horizontally
+    start_nodes=[]
+    if (labyrinth[0][0] == labyrinth[0][1] == labyrinth[0][2] == "."):
+        start_nodes.append(Node(0,1,"horizontal"))
+    if (labyrinth[0][0] == labyrinth[1][0] == labyrinth[2][0] == "."):
+        start_nodes.append(Node(1,0,"vertical"))
+    return start_nodes
+
+
+def Valid_Labyrinth_Range(labyrinth): #It validates that the matrix has the dimensions (X,Y) where 3<=X,Y<=1000.
 
     if (3 > len(labyrinth) | len(labyrinth)>1000):
         return False
@@ -20,7 +30,7 @@ def Valid_Labyrinth_Range(labyrinth): #Valid that the matrix has the dimensions 
             return False
     return True
 
-def Valid_Labyrinth_Symbols(labyrinth): #Checks if the matrix only has "." and "#".
+def Valid_Labyrinth_Symbols(labyrinth): #Check if the matrix only has "." and "#".
     for i in labyrinth:
         for j in i:
             if not  (j == "#" or  j == "." ):

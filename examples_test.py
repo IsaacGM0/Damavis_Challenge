@@ -1,4 +1,4 @@
-#### Examples for tests ####
+#### Examples for auxiliar tests ####
 
 labyrinth = [
     [".",".",".",".",".",".",".","."],
